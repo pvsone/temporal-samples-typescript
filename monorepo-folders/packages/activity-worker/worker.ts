@@ -2,7 +2,7 @@ import { Worker } from '@temporalio/worker';
 import * as activities from '../temporal-workflows/src/all-activities';
 
 async function run() {
-  // Step 1: Register Workflows and Activities with the Worker and connect to
+  // Step 1: Register Activities with the Worker and connect to
   // the Temporal server.
   const worker = await Worker.create({
     activities,
