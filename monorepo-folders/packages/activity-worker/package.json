@@ -1,5 +1,5 @@
 {
-  "name": "temporal-worker",
+  "name": "activity-worker",
   "version": "0.0.0",
   "private": true,
   "scripts": {

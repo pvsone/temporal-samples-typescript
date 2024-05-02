@@ -5,10 +5,11 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "yarn build.workflows & concurrently --kill-others-on-fail -n 'frontend,api-server,worker' \"yarn frontend\"  \"yarn backend\" \"yarn worker\"",
+    "start": "yarn build.workflows & concurrently --kill-others-on-fail -n 'frontend,api-server,workflow-worker' \"yarn frontend\"  \"yarn backend\" \"yarn workflow-worker\"",
     "backend": "yarn workspace backend-apis start",
     "frontend": "yarn workspace frontend-ui start",
-    "worker": "yarn workspace temporal-worker start",
+    "workflow-worker": "yarn workspace workflow-worker start",
+    "activity-worker": "yarn workspace activity-worker start",
     "build": "yarn workspaces run build",
     "build.workflows": "yarn workspace temporal-workflows build.watch",
     "lint": "yarn workspaces run lint"

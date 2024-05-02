@@ -5,9 +5,8 @@ async function run() {
   // Step 1: Register Workflows and Activities with the Worker and connect to
   // the Temporal server.
   const worker = await Worker.create({
-    workflowsPath: require.resolve('../temporal-workflows/lib/all-workflows.js'),
     activities,
-    taskQueue: 'monorepo',
+    taskQueue: 'monorepo-activities',
   });
   // Worker connects to localhost by default and uses console.error for logging.
   // Customize the Worker by passing more options to create():

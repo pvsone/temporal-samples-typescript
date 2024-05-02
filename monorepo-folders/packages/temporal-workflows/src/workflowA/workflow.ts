@@ -5,9 +5,11 @@ import type * as activitiesB from './activities/activitiesB';
 
 const { activityA } = proxyActivities<typeof activitiesA>({
   startToCloseTimeout: '1 minute',
+  taskQueue: 'monorepo-activities',
 });
 const { activityB } = proxyActivities<typeof activitiesB>({
   startToCloseTimeout: '1 minute',
+  taskQueue: 'monorepo-activities',
 });
 
 export async function WorkflowA(name: string): Promise<string> {
